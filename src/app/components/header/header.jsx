@@ -6,7 +6,7 @@ export default function Header() {
     return (
         <header className="flex justify-between items-center w-full h-24 text-md">
             <div className="pl-8">
-                <Image src={Logo} width={80} height={60} alt="Logo do Villa Musical" className="logo" href="/" />
+                <Image src={Logo} width={100} height={100} alt="Logo do Villa Musical" className="logo" href="/" />
             </div>
 
             <nav className="flex mr-8 gap-8">
