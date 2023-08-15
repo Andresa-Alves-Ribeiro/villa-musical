@@ -1,34 +1,50 @@
+import React, { useState } from 'react';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Image from 'next/image';
-import Equipe from '../../assets/integrantes.jpeg'
+import Corais from '../../assets/corais.jpg';
+import CoralInfanto from '../../assets/coral infanto.jpg';
+import Cordas from '../../assets/cordas.jpg';
+import Libras from '../../assets/libras.jpg';
+import Musicalizacao from '../../assets/music infantil.jpg';
+import Sax from '../../assets/sax.jpg';
+import Violino from '../../assets/violino.jpg';
+import Violoes from '../../assets/violões.jpg';
 
+export default function CarouselFotos() {
 
-export default function Carousel() {
     return (
-        <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
-            <ol className="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div className="carousel-inner">
-                <div className="carousel-item active">
-                    <Image className="d-block w-90" src={Equipe} alt="First slide" style={{ height: '80vh' }} />
+        <div className=" max-w-3xl mx-auto bg-gray-100">
+            <Carousel>
+                <div>
+                    <Image src={Corais} alt="Slide 1" height={600} width={900} />
+                    <p className="legend">Coral</p>
                 </div>
-                <div className="carousel-item">
-                    <Image className="d-block w-100" src={Equipe} alt="Second slide" style={{ height: '80vh' }} />
+                <div>
+                    <Image src={CoralInfanto} alt="Slide 2" height={600} width={900} />
+                    <p className="legend">Coral Infanto-Juvenil</p>
                 </div>
-                <div className="carousel-item">
-                    <Image className="d-block w-100" src={Equipe} alt="Third slide" style={{ height: '80vh' }} />
+                <div>
+                    <Image src={Cordas} alt="Slide 2" height={600} width={900} />
+                    <p className="legend">Cordas</p>
                 </div>
-            </div>
-            <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span className="sr-only">Previous</span>
-            </a>
-            <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                <span className="sr-only">Next</span>
-            </a>
+                <div>
+                    <Image src={Libras} alt="Slide 1" height={600} width={900} />
+                    <p className="legend">Libras</p>
+                </div>
+                <div>
+                    <Image src={Musicalizacao} alt="Slide 2" height={600} width={900} />
+                    <p className="legend">Musicalização Infantil</p>
+                </div>
+                <div>
+                    <Image src={Sax} alt="Slide 2" height={600} width={900} />
+                    <p className="legend">Saxofone</p>
+                </div>
+                <div>
+                    <Image src={Violino} alt="Slide 1" height={600} width={900} />
+                    <p className="legend">Violino</p>
+                </div>
+            </Carousel>
         </div>
     )
 }
