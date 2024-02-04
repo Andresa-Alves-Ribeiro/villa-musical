@@ -15,7 +15,7 @@ export default function CarouselFotos() {
 
     return (
         <div className=" max-w-3xl mx-auto bg-gray-100">
-            <Carousel>
+            <Carousel showThumbs={false}>
                 <div>
                     <Image src={Corais} alt="Slide 1" height={600} width={900} />
                     <p className="legend">Coral</p>

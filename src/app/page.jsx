@@ -15,6 +15,7 @@ import Dança from './assets/danca.svg'
 import Orquestras from './assets/orquestras.svg'
 import Coral from './assets/coral.svg'
 import CarouselFotos from './components/carousel/carousel';
+import Footer from './components/footer/page';
 
 
 export default function Home() {
@@ -22,12 +23,12 @@ export default function Home() {
     <main className="flex flex-col min-h-screen">
       <Header />
 
-      <section>
+      <section className='bg-amber-300'>
         <div className="grid">
           <div className="flex items-center justify-center mb-16">
             <div className="md:w-1/3 mr-14">
-              <h2 className="text-3xl font-bold mb-6">Sobre a Villa-Musical</h2>
-              <p className="text-gray-700">
+              <h2 className="text-3xl font-bold mb-6 text-blue-700">Sobre a Villa-Musical</h2>
+              <p className="text-zinc-700">
                 O Villa-Musical é um projeto da Secretaria Municipal de Educação da Prefeitura de Cosmópolis que tem como principal objetivo a formação humana através do ensino de música. Com oficinas de diversos Instrumentos Musicais, Musicalização infantil, Canto Coral, entre outras. O projeto oferece aulas gratuitas de música e atende centenas de alunos de diferentes regiões da cidade.
               </p>
             </div>
@@ -41,7 +42,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-gray-100 py-16">
+      <section className="py-16">
         <div className="container mx-auto px-6">
           <h1 className="text-3xl font-bold text-center pb-14 text-gray-900">Quem somos e o que fazemos?</h1>
           <div className="text-gray-700 mx-14">
@@ -75,60 +76,62 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
+      <section className='bg-amber-300'>
         <div className="grid grid-cols-3 gap-8 pb-12">
           <div className="flex items-center justify-center flex-col pt-14 transform transition-transform hover:scale-105">
             <Image src={Cordas} alt="Violão" width={200} height={200} />
-            <span className="text-lg mt-6 font-bold">Cordas</span>
+            <span className="text-lg mt-6 font-bold uppercase text-blue-700">Cordas</span>
           </div>
           <div className="flex items-center justify-center flex-col pt-14 transform transition-transform hover:scale-105">
             <Image src={Metais} alt="Violão" width={200} height={200} />
-            <span className="text-lg mt-6 font-bold">Metais</span>
+            <span className="text-lg mt-6 font-bold uppercase text-blue-700">Metais</span>
           </div>
           <div className="flex items-center justify-center flex-col pt-14 transform transition-transform hover:scale-105">
             <Image src={Madeiras} alt="Violão" width={200} height={200} />
-            <span className="text-lg mt-6 font-bold">Madeiras</span>
+            <span className="text-lg mt-6 font-bold uppercase text-blue-700">Madeiras</span>
           </div>
           <div className="flex items-center justify-center flex-col pt-14 transform transition-transform hover:scale-105">
             <Image src={Percussão} alt="Violão" width={200} height={200} />
-            <span className="text-lg mt-6 font-bold">Percussão</span>
+            <span className="text-lg mt-6 font-bold uppercase text-blue-700">Percussão</span>
           </div>
           <div className="flex items-center justify-center flex-col pt-14 transform transition-transform hover:scale-105">
             <Image src={Teclas} alt="Violão" width={200} height={200} />
-            <span className="text-lg mt-6 font-bold">Teclas</span>
+            <span className="text-lg mt-6 font-bold uppercase text-blue-700">Teclas</span>
           </div>
           <div className="flex items-center justify-center flex-col pt-14 transform transition-transform hover:scale-105">
             <Image src={Voz} alt="Violão" width={200} height={200} />
-            <span className="text-lg mt-6 font-bold">Voz</span>
+            <span className="text-lg mt-6 font-bold uppercase text-blue-700">Voz</span>
           </div>
           <div className="flex items-center justify-center flex-col pt-14 transform transition-transform hover:scale-105">
             <Image src={Dança} alt="Violão" width={200} height={200} />
-            <span className="text-lg mt-6 font-bold">Outras linguagens artistícas</span>
+            <span className="text-lg mt-6 font-bold uppercase text-blue-700">Outras linguagens artistícas</span>
           </div>
           <div className="flex items-center justify-center flex-col pt-14 transform transition-transform hover:scale-105">
             <Image src={Orquestras} alt="Violão" width={200} height={200} />
-            <span className="text-lg mt-6 font-bold">Orquestras e Grupos Musicais</span>
+            <span className="text-lg mt-6 font-bold uppercase text-blue-700">Orquestras e Grupos Musicais</span>
           </div>
           <div className="flex items-center justify-center flex-col pt-14 transform transition-transform hover:scale-105">
             <Image src={Coral} alt="Violão" width={200} height={200} />
-            <span className="text-lg mt-6 font-bold">Coral</span>
+            <span className="text-lg mt-6 font-bold uppercase text-blue-700">Coral</span>
           </div>
         </div>
       </section>
 
-      <section className="bg-gray-100 pt-10">
+      <section className="pt-10 mb-16">
         <div className="flex items-center justify-center mb-16 mt-6">
           <h2 className="text-2xl font-bold text-gray-700">Veja a seguir algumas de nossas aulas e apresentações</h2>
         </div>
         <CarouselFotos />
       </section>
 
-
-      <section className='my-8 mx-auto'>
-        <h2 className="text-xl font-bold pb-3">Encontre-nos aqui</h2>
-        <p className='pb-4'>Estamos localizados no endereço abaixo:</p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d460.2605009935152!2d-47.193088137240075!3d-22.650656233341664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8924095697737%3A0x30b9fab2ec543c79!2sR.%20Dr.%20Moacir%20do%20Amaral%2C%2015b%20-%20Jardim%20Bela%20Vista%2C%20Cosm%C3%B3polis%20-%20SP%2C%2013150-000!5e0!3m2!1spt-BR!2sbr!4v1688689271788!5m2!1spt-BR!2sbr" width="1200" height="450" style={{ border: 0 }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <section className='bg-amber-300'>
+        <h1 className='py-8 text-center text-2xl font-semibold text-blue-700'>Estamos localizados no endereço abaixo:</h1>
+        <div className="flex justify-center py-12">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d460.2605009935152!2d-47.193088137240075!3d-22.650656233341664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8924095697737%3A0x30b9fab2ec543c79!2sR.%20Dr.%20Moacir%20do%20Amaral%2C%2015b%20-%20Jardim%20Bela%20Vista%2C%20Cosm%C3%B3polis%20-%20SP%2C%2013150-000!5e0!3m2!1spt-BR!2sbr!4v1688689271788!5m2!1spt-BR!2sbr" width="1200" height="450" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+        </div>
       </section>
+
+      <Footer />
     </main>
   );
 }
