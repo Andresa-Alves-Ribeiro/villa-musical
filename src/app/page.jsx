@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 
 import Image from 'next/image'
 import Header from './components/header/header'
-import Equipe from './assets/integrantes.jpeg'
 import Cordas from './assets/guitar.svg'
 import Metais from './assets/trumpet.svg'
 import Madeiras from './assets/flute.svg'
@@ -16,36 +15,26 @@ import Orquestras from './assets/orquestras.svg'
 import Coral from './assets/coral.svg'
 import CarouselFotos from './components/carousel/carousel';
 import Footer from './components/footer/page';
-
+import Logo from './assets/nova_logo.jpg'
+import Rafael from './assets/rafael.jpg'
 
 export default function Home() {
   return (
     <main className="flex flex-col min-h-screen">
-      <Header />
 
-      <section className='bg-amber-300'>
+      <section className='section-with-background'>
+        <Header />
         <div className="grid">
-          <div className="flex items-center justify-center mb-16">
-            <div className="md:w-1/3 mr-14">
-              <h2 className="text-3xl font-bold mb-6 text-blue-700">Sobre a Villa-Musical</h2>
-              <p className="text-zinc-700">
-                O Villa-Musical é um projeto da Secretaria Municipal de Educação da Prefeitura de Cosmópolis que tem como principal objetivo a formação humana através do ensino de música. Com oficinas de diversos Instrumentos Musicais, Musicalização infantil, Canto Coral, entre outras. O projeto oferece aulas gratuitas de música e atende centenas de alunos de diferentes regiões da cidade.
-              </p>
-            </div>
-
-            <div className="flex items-center justify-center md:justify-end w-1/2 md:w-1/3 ml-14 pt-14 pb-14">
-              <div className="image-container relative pb-10">
-                <Image src={Equipe} alt="Integrantes do Villa" className="rounded-lg" />
-              </div>
-            </div>
+          <div className="flex items-center justify-center mt-24">
+            <Image src={Logo} alt="Integrantes do Villa" className="rounded-lg w-1/3 with-transparent-border" />
           </div>
         </div>
       </section>
 
       <section className="py-16">
         <div className="container mx-auto px-6">
-          <h1 className="text-3xl font-bold text-center pb-14 text-gray-900">Quem somos e o que fazemos?</h1>
-          <div className="text-gray-700 mx-14">
+          <h1 className="text-3xl font-bold text-center pb-14 text-gray-200">Quem somos e o que fazemos?</h1>
+          <div className="text-gray-300 mx-14">
             <p className="mb-6">
               O <i>Villa-Musical</i> é um projeto da Secretaria Municipal de Educação da Prefeitura de Cosmópolis que tem como principal objetivo a formação humana através do ensino de música. Com oficinas de diversos Instrumentos Musicais, Musicalização infantil, Canto Coral, entre outras, o projeto oferece aulas gratuitas de música e atende centenas de alunos de diferentes regiões da cidade.
             </p>
@@ -58,7 +47,7 @@ export default function Home() {
             <p className="mb-6">
               Em 2021, avançando ainda mais na direção de democratizar o ensino de música na nossa cidade, o “Villa” - como carinhosamente costumamos chamar -, iniciou uma série de novas propostas, tendo como destaque principal a criação de grupos musicais como a Orquestra do Projeto Villa-Musical e o Coral Municipal de Cosmópolis. O projeto também se organiza para levar aulas de musicalização para a Educação Infantil, promovendo a formação humana através da arte para milhares de crianças cosmopolenses a partir dos 3 anos de idade. Estão sendo feitas, ainda, parcerias com a Educação Especial, com o objetivo de enriquecer ainda mais as atividades com os alunos atendidos por instituições como Caps Infantil e Cerc, incluindo atividades musicais direcionadas no trabalho com crianças especiais.
             </p>
-            <blockquote className="text-center italic text-gray-500 relative mt-14">
+            <blockquote className="text-center italic text-gray-400 relative mt-14">
               <div className="absolute top-0 left-0 transform -translate-x-8 -translate-y-8 text-5xl">
                 &ldquo;
               </div>
@@ -68,15 +57,18 @@ export default function Home() {
               </div>
             </blockquote>
             <br />
-            <span className='block text-center text-gray-700 mb-14'>Prof. Rafael Beling - Coordenador de Música da Secretaria Municipal de Educação</span>
-            <p className="text-gray-700 mt-14 mb-6">
-              São oferecidas aulas das famílias de instrumentos abaixo, de forma gratuita e de qualidade, para centenas de alunos:
-            </p>
+          </div>
+          <div className='flex flex-row items-center justify-center gap-8'>
+            <Image src={Rafael} alt="Violão" width={150} height={150} className='rounded-full' />
+            <span className='text-center text-gray-300'>Prof. Rafael Beling - Coordenador de Música da Secretaria Municipal de Educação</span>
           </div>
         </div>
       </section>
 
       <section className='bg-amber-300'>
+      <p className="text-gray-800 mt-14 mb-6">
+            São oferecidas aulas das famílias de instrumentos abaixo, de forma gratuita e de qualidade, para centenas de alunos:
+          </p>
         <div className="grid grid-cols-3 gap-8 pb-12">
           <div className="flex items-center justify-center flex-col pt-14 transform transition-transform hover:scale-105">
             <Image src={Cordas} alt="Violão" width={200} height={200} />
