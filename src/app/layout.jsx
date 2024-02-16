@@ -1,7 +1,7 @@
 import './globals.css'
-import { Roboto, Poppins } from 'next/font/google'
+import { Syne } from 'next/font/google'
 
-const poppins = Poppins({ subsets: ['latin'], weight: '400', })
+const syne = Syne({ subsets: ['latin'], weight: '400', })
 
 
 export const metadata = {
@@ -12,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
-      <body className={poppins.className}>{children}</body>
+      <body className={syne.className}>{children}</body>
     </html>
   )
 }

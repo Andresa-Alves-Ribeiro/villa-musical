@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import Image from 'next/image'
 import Header from './components/header/header'
@@ -16,6 +16,7 @@ import Coral from './assets/coral.svg'
 import CarouselFotos from './components/carousel/carousel';
 import Footer from './components/footer/page';
 import Logo from './assets/nova_logo.jpg'
+import Equipe from './assets/polaroid-equipe.png'
 import Rafael from './assets/rafael.jpg'
 
 export default function Home() {
@@ -32,22 +33,27 @@ export default function Home() {
       </section>
 
       <section className="py-16">
-        <div className="container mx-auto px-6">
-          <h1 className="text-3xl font-bold text-center pb-14 text-gray-200">Quem somos e o que fazemos?</h1>
-          <div className="text-gray-300 mx-14">
-            <p className="mb-6">
+        <div className="container mx-auto px-6 flex flex-row">
+          <div className="text-gray-300 mx-10 flex flex-col">
+            <h1 className="text-5xl text-center font-Cinzel pb-14 yellow-text hover:shadow-md hover:rotate-3 transition duration-300">CONHEÇA O VILA MUSICAL</h1>
+            <p className="mb-6 font-bold text-justify fadeIn">
               O <i>Villa-Musical</i> é um projeto da Secretaria Municipal de Educação da Prefeitura de Cosmópolis que tem como principal objetivo a formação humana através do ensino de música. Com oficinas de diversos Instrumentos Musicais, Musicalização infantil, Canto Coral, entre outras, o projeto oferece aulas gratuitas de música e atende centenas de alunos de diferentes regiões da cidade.
             </p>
-            <p className="mb-6">
-              Com a promulgação da Lei de n° 11.769 de 2008 - que passou a incluir obrigatoriamente os conteúdos musicais na disciplina de Arte das escolas - a Secretaria de Educação de Cosmópolis rapidamente se organizou para se adequar à Lei. Foi criado, então, no ano de 2009, o Projeto Villa-Musical. Sua principal tarefa na época foi a inclusão de aulas de musicalização infantil com professores especialistas em Educação Musical nas escolas regulares de 1° ao 5° de toda a Rede Municipal. Foram milhares de alunos atendidos semanalmente, o que fez de Cosmópolis uma pioneira no ensino de música, sendo a primeira cidade da região a levar aulas de musicalização infantil de forma sistematizada para a educação básica.
+            <p className="mb-6 text-justify fadeIn">
+              Na direção de democratizar o ensino de música na nossa cidade, o “Villa” - como carinhosamente costumamos chamar -, iniciou uma série de novas propostas, tendo como destaque principal a criação de grupos musicais como a Orquestra do Projeto Villa-Musical e o Coral Municipal de Cosmópolis. O projeto também se organiza para levar aulas de musicalização para a Educação Infantil, promovendo a formação humana através da arte para milhares de crianças cosmopolenses a partir dos 3 anos de idade. Estão sendo feitas, ainda, parcerias com a Educação Especial, com o objetivo de enriquecer ainda mais as atividades com os alunos atendidos por instituições como Caps Infantil e Cerc, incluindo atividades musicais direcionadas no trabalho com crianças especiais.
             </p>
-            <p className="mb-6">
-              Em 2017 o projeto Villa-Musical dá mais um importante passo em seu desenvolvimento, assumindo uma feição, agora, com ênfase em outra modalidade de ensino. Como as escolas passaram a ter as aulas de musicalização como parte da grade curricular com professores efetivos, o Villa-Musical dedicou-se, então, ao ensino específico de instrumentos musicais. As aulas passaram a acontecer em período noturno, na EMEB Educador Paulo Freire, atendendo não apenas crianças, mas também jovens, adultos e idosos que tinham o sonho de estudar música.
-            </p>
-            <p className="mb-6">
-              Em 2021, avançando ainda mais na direção de democratizar o ensino de música na nossa cidade, o “Villa” - como carinhosamente costumamos chamar -, iniciou uma série de novas propostas, tendo como destaque principal a criação de grupos musicais como a Orquestra do Projeto Villa-Musical e o Coral Municipal de Cosmópolis. O projeto também se organiza para levar aulas de musicalização para a Educação Infantil, promovendo a formação humana através da arte para milhares de crianças cosmopolenses a partir dos 3 anos de idade. Estão sendo feitas, ainda, parcerias com a Educação Especial, com o objetivo de enriquecer ainda mais as atividades com os alunos atendidos por instituições como Caps Infantil e Cerc, incluindo atividades musicais direcionadas no trabalho com crianças especiais.
-            </p>
-            <blockquote className="text-center italic text-gray-400 relative mt-14">
+            <br />
+          </div>
+
+          <div className='xl:-mt-24'>
+            <Image src={Equipe} alt="Equipe" width={4000} height={4000} />
+          </div>
+        </div>
+      </section>
+
+
+      {/*<div>
+      <blockquote className="text-center italic text-gray-400 relative mt-14">
               <div className="absolute top-0 left-0 transform -translate-x-8 -translate-y-8 text-5xl">
                 &ldquo;
               </div>
@@ -56,19 +62,17 @@ export default function Home() {
                 &rdquo;
               </div>
             </blockquote>
-            <br />
-          </div>
-          <div className='flex flex-row items-center justify-center gap-8'>
+
+            <div className='flex flex-row items-center justify-center gap-8'>
             <Image src={Rafael} alt="Violão" width={150} height={150} className='rounded-full' />
             <span className='text-center text-gray-300'>Prof. Rafael Beling - Coordenador de Música da Secretaria Municipal de Educação</span>
           </div>
-        </div>
-      </section>
+  </div>*/}
 
-      <section className='bg-amber-300'>
-      <p className="text-gray-800 mt-14 mb-6">
-            São oferecidas aulas das famílias de instrumentos abaixo, de forma gratuita e de qualidade, para centenas de alunos:
-          </p>
+      <section className='yellow-background-home'>
+        <p className="text-gray-800 mt-14 mb-6">
+          São oferecidas aulas das famílias de instrumentos abaixo, de forma gratuita e de qualidade, para centenas de alunos:
+        </p>
         <div className="grid grid-cols-3 gap-8 pb-12">
           <div className="flex items-center justify-center flex-col pt-14 transform transition-transform hover:scale-105">
             <Image src={Cordas} alt="Violão" width={200} height={200} />
