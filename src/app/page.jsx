@@ -78,7 +78,7 @@ export default function Home() {
           <div className="w-1/2 flex flex-row transform transition-transform hover:scale-105 rounded-xl bg-zinc-900">
             <Image src={Cordas} alt="Violão" width={200} height={200} className='rounded-xl' />
             <div className='px-4 pt-8'>
-              <span className="text-lg mt-6 font-bold uppercase text-slate-100">Instrumentos de cordas</span>
+              <span className="text-lg mt-6 font-bold uppercase text-yellow-300">Instrumentos de cordas</span>
               <p className='text-zinc-400 pt-4'>Desenvolva habilidades expressivas através do violão, violino, violoncelo e outros instrumentos de cordas. Nossos instrutores altamente qualificados irão guiá-lo desde os conceitos básicos até técnicas avançadas, proporcionando uma experiência de aprendizado enriquecedora.</p>
             </div>
           </div>
@@ -86,7 +86,7 @@ export default function Home() {
           <div className="w-1/2 flex flex-row-reverse transform transition-transform hover:scale-105 rounded-xl bg-zinc-900 ml-auto" >
             <Image src={Metais} alt="metais" width={200} height={200} className='rounded-xl' />
             <div className='px-4 pt-8'>
-              <span className="text-lg mt-6 font-bold uppercase text-slate-100">Instrumentos de metais</span>
+              <span className="text-lg mt-6 font-bold uppercase text-yellow-300">Instrumentos de metais</span>
               <p className='text-zinc-400 pt-4'>Explore a potência e a versatilidade dos instrumentos de metais, como trompete, trombone e muitos outros. Nossos instrutores especializados irão ajudá-lo a dominar os fundamentos e a aprimorar suas habilidades em um ambiente de aprendizado dinâmico e encorajador.</p>
             </div>
           </div>
@@ -94,7 +94,7 @@ export default function Home() {
           <div className="w-1/2 flex flex-row transform transition-transform hover:scale-105 rounded-xl bg-zinc-900">
             <Image src={Madeiras} alt="madeiras" width={200} height={200} className='rounded-xl' />
             <div className='px-4 pt-8'>
-              <span className="text-lg mt-6 font-bold uppercase text-slate-100">Instrumentos de madeira</span>
+              <span className="text-lg mt-6 font-bold uppercase text-yellow-300">Instrumentos de madeira</span>
               <p className='text-zinc-400 pt-4'>Descubra a riqueza e a expressividade dos instrumentos de madeira, incluindo flauta, clarinete, oboé e mais. Explore uma variedade de estilos musicais e desenvolva sua musicalidade em um ambiente acolhedor e estimulante.</p>
             </div>
           </div>
@@ -102,7 +102,7 @@ export default function Home() {
           <div className="w-1/2 flex flex-row-reverse transform transition-transform hover:scale-105 rounded-xl bg-zinc-900 ml-auto">
             <Image src={Percussão} alt="percussão" width={200} height={200} className='rounded-xl' />
             <div className='px-4 pt-8'>
-              <span className="text-lg mt-6 font-bold uppercase text-slate-100">Instrumentos de percussão</span>
+              <span className="text-lg mt-6 font-bold uppercase text-yellow-300">Instrumentos de percussão</span>
               <p className='text-zinc-400 pt-4'>Explore o mundo rítmico e pulsante dos instrumentos de percussão, como a bateria. Nossos instrutores irão guiá-lo na jornada de dominar padrões rítmicos, técnicas de batida e coordenação musical.</p>
             </div>
           </div>
@@ -110,7 +110,7 @@ export default function Home() {
           <div className="w-1/2 flex flex-row transform transition-transform hover:scale-105 rounded-xl bg-zinc-900">
             <Image src={Teclas} alt="teclas" width={200} height={200} className='rounded-xl' />
             <div className='px-4 pt-8'>
-              <span className="text-lg mt-6 font-bold uppercase text-slate-100">Instrumentos de teclas</span>
+              <span className="text-lg mt-6 font-bold uppercase text-yellow-300">Instrumentos de teclas</span>
               <p className='text-zinc-400 pt-4'>Explore a riqueza sonora e expressiva do piano. Nossos professores oferecem uma jornada de aprendizado personalizada, abordando desde os fundamentos da técnica até a interpretação de repertório diversificado.</p>
             </div>
           </div>
@@ -118,7 +118,7 @@ export default function Home() {
           <div className="w-1/2 flex flex-row-reverse transform transition-transform hover:scale-105 rounded-xl bg-zinc-900 ml-auto">
             <Image src={Voz} alt="Voz" width={200} height={200} className='rounded-xl' />
             <div className='px-4 pt-8'>
-              <span className="text-lg mt-6 font-bold uppercase text-slate-100">Voz</span>
+              <span className="text-lg mt-6 font-bold uppercase text-yellow-300">Voz</span>
               <p className='text-zinc-400 pt-4'>Descubra o potencial da sua voz em nossas aulas de canto. Nossos instrutores guiarão você no desenvolvimento da técnica vocal, abrangendo desde o controle da respiração e projeção até a interpretação emotiva das músicas. Aprenda a cuidar da sua voz de forma saudável e a explorar sua expressividade musical.</p>
             </div>
           </div>
@@ -126,7 +126,7 @@ export default function Home() {
           <div className="w-1/2 flex flex-row transform transition-transform hover:scale-105 rounded-xl bg-zinc-900">
             <Image src={Dança} alt="Dança" width={200} height={200} className='rounded-xl' />
             <div className='px-4 pt-8'>
-              <span className="text-lg mt-6 font-bold uppercase text-slate-100">Dança</span>
+              <span className="text-lg mt-6 font-bold uppercase text-yellow-300">Dança</span>
               <p className='text-zinc-400 pt-4'>Sinta a energia contagiante do Hip Hop em nossas aulas de dança. Nossos instrutores especializados irão guiá-lo através dos movimentos marcantes e ritmos envolventes desse estilo urbano e vibrante. Aprenda os fundamentos do Hip Hop, incluindo popping, locking, e breaking, enquanto desenvolve sua criatividade e expressão pessoal.</p>
             </div>
           </div>
@@ -134,7 +134,7 @@ export default function Home() {
           <div className="w-1/2 flex flex-row-reverse transform transition-transform hover:scale-105 rounded-xl bg-zinc-900 ml-auto">
             <Image src={Orquestras} alt="Orquestras e Grupos Musicais" width={200} height={200} className='rounded-xl' />
             <div className='px-4 pt-8'>
-              <span className="text-lg mt-6 font-bold uppercase text-slate-100">Orquestras e Grupos Musicais</span>
+              <span className="text-lg mt-6 font-bold uppercase text-yellow-300">Orquestras e Grupos Musicais</span>
               <p className='text-zinc-400 pt-4'>Junte-se à nossa comunidade de músicos em crescimento nas orquestras e grupos musicais. Experimente a sinergia única de tocar em conjunto e aprofunde sua compreensão da música através da colaboração com outros artistas. Seja você um violinista, percussionista ou flautista, há um lugar para você em nossa orquestra.</p>
             </div>
           </div>
@@ -142,7 +142,7 @@ export default function Home() {
           <div className="w-1/2 flex flex-row transform transition-transform hover:scale-105 rounded-xl bg-zinc-900">
             <Image src={Coral} alt="Coral" width={200} height={200} className='rounded-xl' />
             <div className='px-4 pt-8'>
-              <span className="text-lg mt-6 font-bold uppercase text-slate-100">Coral</span>
+              <span className="text-lg mt-6 font-bold uppercase text-yellow-300">Coral</span>
               <p className='text-zinc-400 pt-4 pb-8'>Explore a beleza da harmonia vocal nas nossas aulas de coral. Junte-se a um grupo apaixonado de cantores para aprender e praticar uma variedade de estilos musicais, desde música clássica até contemporânea. Sob a orientação de nossos professores experientes, você desenvolverá técnicas vocais, aprimorará sua capacidade de ouvir e se conectar com outros cantores para criar performances emocionantes e envolventes.</p>
             </div>
           </div>
@@ -150,16 +150,16 @@ export default function Home() {
           <div className="w-1/2 flex flex-row-reverse transform transition-transform hover:scale-105 rounded-xl bg-zinc-900 ml-auto">
             <Image src={Teatro} alt="Teatro" width={200} height={200} className='rounded-xl' />
             <div className='px-4 pt-8'>
-              <span className="text-lg mt-6 font-bold uppercase text-slate-100">Teatro</span>
+              <span className="text-lg mt-6 font-bold uppercase text-yellow-300">Teatro</span>
               <p className='text-zinc-400 pt-4 pb-8'>Explore a arte da interpretação nas nossas aulas de teatro. Nossos instrutores irão guiá-lo através de uma variedade de técnicas de atuação, improvisação e expressão corporal, enquanto você mergulha na exploração de personagens e narrativas emocionantes. Desde exercícios de aquecimento até projetos de cena completos, nossas aulas oferecem um ambiente dinâmico e colaborativo para desenvolver suas habilidades de atuação, construir confiança e criar performances teatrais memoráveis.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-amber-300 pt-10 mb-16">
+      <section className="pt-10 mb-16">
         <div className="flex items-center justify-center mb-16 mt-6">
-          <h2 className="text-2xl font-bold text-gray-700">Veja a seguir algumas de nossas aulas e apresentações</h2>
+          <h1 className="text-3xl text-center font-Cinzel pb-4 yellow-text">Veja a seguir algumas de nossas aulas e apresentações</h1>
         </div>
         <CarouselFotos />
       </section>
