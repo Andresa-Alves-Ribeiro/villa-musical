@@ -20,7 +20,7 @@ export default function Header() {
                     Notícias
                 </Link>
 
-                <Link href="/contato" className="text-white relative transition-colors duration-300 transition-border-color custom-link hover:text-amber-300">
+                <Link href="#contato" className="text-white relative transition-colors duration-300 transition-border-color custom-link hover:text-amber-300">
                     Contato
                 </Link>
             </nav>

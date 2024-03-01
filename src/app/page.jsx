@@ -1,9 +1,12 @@
 'use client'
 
-import React, { useState, useEffect } from 'react';
-
+import React from 'react';
 import Image from 'next/image'
+
 import Header from './components/header/header'
+import Footer from './components/footer/page';
+import CarouselFotos from './components/carousel/carousel';
+
 import Cordas from './assets/cordas-arte.jpg'
 import Metais from './assets/metais-arte.jpg'
 import Madeiras from './assets/madeiras-arte.jpg'
@@ -14,11 +17,11 @@ import Dança from './assets/danca-arte.jpg'
 import Orquestras from './assets/orquestra-arte.jpg'
 import Coral from './assets/coral-arte.jpg'
 import Teatro from './assets/teatro-arte.jpg'
-import CarouselFotos from './components/carousel/carousel';
-import Footer from './components/footer/page';
 import Logo from './assets/nova_logo.jpg'
 import Equipe from './assets/polaroid-equipe.png'
-import Rafael from './assets/rafael.jpg'
+
+import { MapPin, EnvelopeSimple, Phone, Globe, FacebookLogo, InstagramLogo } from '@phosphor-icons/react';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -28,7 +31,7 @@ export default function Home() {
         <Header />
         <div className="grid">
           <div className="flex items-center justify-center mt-24">
-            <Image src={Logo} alt="Integrantes do Villa" className="rounded-lg w-1/3 with-transparent-border" />
+            <Image src={Logo} alt="Logo do Villa" className="rounded-lg w-1/3 with-transparent-border" />
           </div>
         </div>
       </section>
@@ -157,17 +160,76 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="pt-10 mb-16">
+      <section className="pt-10 mb-24">
         <div className="flex items-center justify-center mb-16 mt-6">
-          <h1 className="text-3xl text-center font-Cinzel pb-4 yellow-text">Veja a seguir algumas de nossas aulas e apresentações</h1>
+          <h1 className="text-2xl text-center font-Cinzel pb-4 yellow-text uppercase">Veja a seguir algumas de nossas aulas e apresentações</h1>
         </div>
         <CarouselFotos />
       </section>
 
-      <section className=''>
-        <h1 className='py-8 text-center text-2xl font-semibold text-blue-700'>Estamos localizados no endereço abaixo:</h1>
-        <div className="flex justify-center py-12">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d460.2605009935152!2d-47.193088137240075!3d-22.650656233341664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8924095697737%3A0x30b9fab2ec543c79!2sR.%20Dr.%20Moacir%20do%20Amaral%2C%2015b%20-%20Jardim%20Bela%20Vista%2C%20Cosm%C3%B3polis%20-%20SP%2C%2013150-000!5e0!3m2!1spt-BR!2sbr!4v1688689271788!5m2!1spt-BR!2sbr" width="1200" height="450" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+      <section id='contato' className='w-3/2 mx-auto my-10 rounded-lg flex flex-col bg-zinc-900 bg-opacity-90'>
+        <h1 className='text-xl text-center yellow-text font-Cinzel py-10 uppercase'>Estamos localizados no endereço abaixo:</h1>
+        <div className="flex justify-center ">
+          <div className='px-8 py-14 grid grid-cols-2 gap-2'>
+
+            <div className='w-64'>
+              <div className='flex w-16 h-16 rounded-full border-2 border-yellow-300 items-center mx-auto p-4'>
+                <MapPin size={40} color='#ffd82d' />
+              </div>
+
+              <div className='flex-col pt-4 space-y-4'>
+                <h1 className='text-center font-bold uppercase'>Endereço:</h1>
+
+                <p className='text-zinc-400 text-justify mx-auto flex-wrap w-44'>R. Dr. Moacir do Amaral, 15b - Jardim Bela Vista, Cosmópolis - SP, 13150-000</p>
+              </div>
+            </div>
+
+            <div className='w-64'>
+              <div className='flex w-16 h-16 mx-auto rounded-full border-2 border-yellow-300 items-center p-4'>
+                <EnvelopeSimple size={50} color='#ffd82d' />
+              </div>
+
+              <div className='flex-col pt-4 space-y-4'>
+                <h1 className='text-center font-bold uppercase'>Email:</h1>
+
+                <p className='text-zinc-400 pb-4 text-center'>musica.cosmopolis@gmail.com</p>
+              </div>
+            </div>
+
+            <div className='w-64'>
+              <div className='flex w-16 h-16 mx-auto rounded-full border-2 border-yellow-300 items-center p-4'>
+                <Phone size={50} color='#ffd82d' />
+              </div>
+
+              <div className='flex-col pt-4 space-y-2'>
+                <h1 className='text-center font-bold uppercase'>Telefone:</h1>
+
+                <p className='text-zinc-400 pb-4 text-center'>(19) 3812-1534</p>
+              </div>
+            </div>
+
+            <div className='w-64'>
+              <div className='flex w-16 h-16 mx-auto rounded-full border-2 border-yellow-300 items-center p-4'>
+                <Globe size={50} color='#ffd82d' />
+              </div>
+
+              <div className='flex-col pt-4 space-y-4'>
+                <h1 className='text-center font-bold uppercase'>Contatos:</h1>
+
+                <div className='flex justify-center gap-4'>
+                  <Link href='https://web.facebook.com/profile.php?id=100065244751974&locale=hi_IN' target='_blank'>
+                    <FacebookLogo size={40} weight="fill" color='#2d88ff' />
+                  </Link>
+
+                  <Link href='https://www.instagram.com/villamusical_escolademusica/' target='_blank'>
+                    <InstagramLogo size={40} weight="fill" color='#ff2d6c' />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d460.2605009935152!2d-47.193088137240075!3d-22.650656233341664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8924095697737%3A0x30b9fab2ec543c79!2sR.%20Dr.%20Moacir%20do%20Amaral%2C%2015b%20-%20Jardim%20Bela%20Vista%2C%20Cosm%C3%B3polis%20-%20SP%2C%2013150-000!5e0!3m2!1spt-BR!2sbr!4v1688689271788!5m2!1spt-BR!2sbr" width="800" height="600" style={{ border: 0 }} allowFullScreen="" loading="lazy" title='map' referrerPolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </section>
 

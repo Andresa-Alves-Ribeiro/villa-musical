@@ -25,7 +25,6 @@ html {
 body {
   background-color: black;
   color: rgb(255, 255, 255);
-  //background-color: hsl(0 0% 98%);
 }
 
 p {
@@ -71,7 +70,7 @@ p {
   height: 105vh;
   background-image: linear-gradient(
     -206deg,
-    #fdff2d 10%,
+    #ffd82d 10%,
     #000000 48%,
     #000000 -100%
   );
@@ -82,11 +81,11 @@ p {
 }
 
 .yellow-background-home {
-  background-color: #fdff2d;
+  background-color: #ffd82d;
 }
 
 .yellow-text {
-  color: #fdff2d;
+  color: #ffd82d;
   font-family: "Cinzel", serif;
 }
 
