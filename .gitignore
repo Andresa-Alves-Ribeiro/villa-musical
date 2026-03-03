@@ -17,6 +17,9 @@
 
 # misc
 .DS_Store
+
+# Windows reserved names (evita erro ao fazer git add)
+nul
 *.pem
 
 # debug
