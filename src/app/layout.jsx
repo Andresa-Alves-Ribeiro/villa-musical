@@ -1,8 +1,8 @@
 import './globals.css'
-import { Syne } from 'next/font/google'
+import { Source_Sans_3, Syne } from 'next/font/google'
 
-const syne = Syne({ subsets: ['latin'], weight: '400', })
-
+const sourceSans = Source_Sans_3({ subsets: ['latin'], weight: ['400', '500', '600', '700'] })
+const syne = Syne({ subsets: ['latin'], weight: ['400', '500', '600', '700', '800'], variable: '--font-syne' })
 
 export const metadata = {
   title: 'Villa Musical',
@@ -12,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
-      <body className={syne.className}>{children}</body>
+      <body className={`${sourceSans.className} ${syne.variable}`}>{children}</body>
     </html>
   )
 }

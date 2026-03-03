@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Ultra&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap");
 
 * {
   margin: 0;
@@ -23,8 +23,8 @@ html {
 }
 
 body {
-  background-color: black;
-  color: rgb(255, 255, 255);
+  background: #0c0c0c;
+  color: #f8fafc;
 }
 
 p {
@@ -38,6 +38,9 @@ p {
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 }
 
+.custom-link {
+  position: relative;
+}
 .custom-link::after {
   content: "";
   position: absolute;
@@ -45,62 +48,286 @@ p {
   bottom: 0;
   width: 100%;
   height: 2px;
-  background-color: #00eeff;
+  background: #b8860b;
   transform: scaleX(0);
-  transition: transform 0.3s;
+  transform-origin: right;
+  transition: transform 0.25s ease;
 }
-
 .custom-link:hover::after {
   transform: scaleX(1);
+  transform-origin: left;
 }
 
-.home-image::after {
-  content: "";
-  height: 100%;
-  width: 100%;
-  background-image: linear-gradient(to top, #007888 0%, #00b1dd 100%);
-  position: absolute;
-  border-radius: 3%;
-  top: -16.8%;
-  left: 16.7%;
-  z-index: -1;
-}
-
+/* Hero institucional - aparência séria e governamental */
 .section-with-background {
-  height: 105vh;
-  background-image: linear-gradient(
-    -206deg,
-    #ffd82d 10%,
-    #000000 48%,
-    #000000 -100%
-  );
+  min-height: 100vh;
+  background: linear-gradient(180deg, #111111 0%, #0c0c0c 100%);
+  position: relative;
 }
 
-.with-transparent-border {
-  box-shadow: 0 0 20px rgba(0.5, 0.5, 0.5, 1.8);
+.section-with-background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: 
+    linear-gradient(180deg, rgba(184, 134, 11, 0.03) 0%, transparent 30%);
+  pointer-events: none;
 }
 
-.yellow-background-home {
-  background-color: #ffd82d;
+/* Hero moderno - background com imagem e opacity */
+.hero-modern {
+  position: relative;
+  isolation: isolate;
 }
 
-.yellow-text {
-  color: #ffd82d;
-  font-family: "Cinzel", serif;
+.hero-modern .hero-logo {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s ease;
 }
 
-@keyframes fadeInAnimation {
+.hero-modern .hero-logo:hover {
+  transform: scale(1.02);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(184, 134, 11, 0.1);
+}
+
+.hero-modern .hero-title {
+  animation: hero-fade-up 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s both;
+}
+
+.hero-modern .hero-subtitle {
+  animation: hero-fade-up 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.35s both;
+}
+
+@keyframes hero-fade-up {
   from {
     opacity: 0;
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.fadeIn {
-  opacity: 0;
-  animation-name: fadeInAnimation;
-  animation-duration: 7s;
-  animation-fill-mode: forwards;
+/* Hero Villa Musical - design musical e profissional */
+.hero-villa {
+  position: relative;
+  isolation: isolate;
+}
+
+.hero-villa .hero-bg-image {
+  transform: scale(1.08);
+  transform-origin: center;
+}
+
+.hero-villa .hero-gradient-overlay {
+  mix-blend-mode: multiply;
+}
+
+/* Linhas de pauta - animação sutil */
+.hero-staff-line {
+  animation: staff-line-flow 8s ease-in-out infinite;
+}
+
+@keyframes staff-line-flow {
+  0%, 100% { opacity: 0.02; transform: scaleX(0.95); }
+  50% { opacity: 0.05; transform: scaleX(1); }
+}
+
+/* Barras de equalizador */
+.hero-eq-bar {
+  animation: eq-pulse 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes eq-pulse {
+  from { transform: scaleY(0.4); opacity: 0.15; }
+  to { transform: scaleY(1); opacity: 0.25; }
+}
+
+/* Notas musicais flutuantes */
+.hero-music-notes {
+  opacity: 0.15;
+}
+
+.hero-note {
+  position: absolute;
+  color: rgba(184, 134, 11, 0.6);
+  animation: note-float 12s ease-in-out infinite;
+}
+
+.hero-note-1 { top: 15%; left: 8%; animation-delay: 0s; }
+.hero-note-2 { top: 70%; right: 12%; animation-delay: 3s; }
+.hero-note-3 { bottom: 25%; left: 15%; animation-delay: 6s; }
+
+@keyframes note-float {
+  0%, 100% { transform: translate(0, 0) rotate(-5deg); opacity: 0.4; }
+  25% { transform: translate(8px, -12px) rotate(3deg); opacity: 0.7; }
+  50% { transform: translate(-5px, 8px) rotate(-2deg); opacity: 0.5; }
+  75% { transform: translate(12px, 5px) rotate(5deg); opacity: 0.6; }
+}
+
+/* Badge com micro interação */
+.hero-badge {
+  transition: border-color 0.3s ease, background 0.3s ease;
+  animation: hero-fade-up 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.1s both;
+}
+
+.hero-badge:hover {
+  border-color: rgba(184, 134, 11, 0.5);
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Logo em moldura de palco */
+.hero-logo-glow {
+  background: radial-gradient(ellipse 70% 60%, rgba(184, 134, 11, 0.15), transparent 70%);
+  filter: blur(20px);
+  animation: logo-glow-pulse 4s ease-in-out infinite;
+}
+
+@keyframes logo-glow-pulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+.hero-logo-frame {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: hero-fade-up 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s both;
+}
+
+.hero-logo-frame:hover {
+  border-color: rgba(184, 134, 11, 0.35);
+  box-shadow: 0 0 40px -10px rgba(184, 134, 11, 0.2);
+}
+
+/* Título com gradiente */
+.hero-title {
+  font-family: var(--font-syne), 'Syne', sans-serif !important;
+  animation: hero-fade-up 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.35s both;
+}
+
+.hero-title-gradient {
+  background: linear-gradient(135deg, #fafafa 0%, #e5e5e5 30%, #d4af37 70%, #b8860b 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 200%;
+  animation: gradient-shift 6s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.hero-subtitle {
+  animation: hero-fade-up 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.5s both;
+}
+
+.hero-divider {
+  animation: hero-fade-up 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.65s both;
+}
+
+.yellow-text {
+  color: #b8860b;
+  font-family: "Cinzel", serif;
+}
+
+
+/* Cards de instrumentos - hover sutil (legado) */
+.instrument-card {
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.instrument-card:hover {
+  border-color: rgba(184, 134, 11, 0.3);
+  box-shadow: 0 4px 24px -4px rgba(0, 0, 0, 0.5);
+}
+
+/* Cards de instrumentos Villa — design palco/vinil */
+.instrument-card-villa {
+  transition: border-color 0.3s ease, box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: instrument-fade-up 0.6s cubic-bezier(0.4, 0, 0.2, 1) backwards;
+}
+
+.instrument-card-villa:hover {
+  border-color: rgba(184, 134, 11, 0.4);
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(184, 134, 11, 0.15);
+}
+
+@keyframes instrument-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.instrument-eq-bar {
+  animation: instrument-eq-pulse 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes instrument-eq-pulse {
+  from {
+    opacity: 0.5;
+    transform: scaleY(0.6);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+/* Divisor de seção */
+.section-divider {
+  width: 48px;
+  height: 2px;
+  background: #b8860b;
+  margin: 0 auto 1.25rem;
+}
+
+/* Badge institucional */
+.badge-institucional {
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #737373;
+  font-weight: 600;
+}
+
+/* About section — moldura e destaque */
+.about-image-frame {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-image-frame:hover {
+  border-color: rgba(184, 134, 11, 0.3);
+  box-shadow: 0 20px 40px -15px rgba(184, 134, 11, 0.15);
+}
+
+/* Cards de destaque — entrada suave */
+.about-highlight-card {
+  animation: about-fade-up 0.6s cubic-bezier(0.4, 0, 0.2, 1) backwards;
+}
+
+@keyframes about-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Gallery — barras de equalizador */
+.gallery-eq-bar {
+  animation: instrument-eq-pulse 1.5s ease-in-out infinite alternate;
+}
+
+/* Gallery — animação suave ao trocar de tab */
+.gallery-tab {
+  animation: about-fade-up 0.4s cubic-bezier(0.4, 0, 0.2, 1) backwards;
 }
