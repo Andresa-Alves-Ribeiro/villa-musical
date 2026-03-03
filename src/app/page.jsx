@@ -1,5 +1,6 @@
 'use client';
 
+import Header from './components/header/header';
 import HeroSection from './components/hero/hero';
 import AboutSection from './components/about-section/about-section';
 import InstrumentsSection from './components/instruments-section/instruments-section';
@@ -10,6 +11,7 @@ import Footer from './components/footer/page';
 export default function Home() {
   return (
     <main className="flex flex-col min-h-screen">
+      <Header />
       <HeroSection />
       <AboutSection />
       <InstrumentsSection />

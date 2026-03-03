@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import Header from '../header/header';
 import Logo from '../../assets/nova_logo.jpg';
 import HeroBg from '../../assets/heitor.png';
 import { MusicNotes } from '@phosphor-icons/react';
@@ -67,7 +66,6 @@ export default function HeroSection() {
         ))}
       </div>
 
-      <Header />
       <div className="hero-content-wrapper relative z-10 flex flex-col items-center justify-center min-h-[calc(100vh-5rem)] pt-28 pb-32 px-6">
         <div className="hero-content max-w-3xl mx-auto text-center">
           <div className="hero-badge inline-flex items-center gap-2 px-5 py-2.5 mb-10 rounded-full border border-amber-900/40 bg-black/30 backdrop-blur-md">
