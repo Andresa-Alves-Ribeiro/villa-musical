@@ -8,9 +8,8 @@ import { CONTACT_INFO } from '../../data/contact';
 
 const NAV_ITEMS = [
     { href: '/', label: 'Início' },
-    { href: '#sobre', label: 'Sobre' },
-    { href: '#oficinas', label: 'Instrumentos' },
-    { href: '#galeria', label: 'Galeria' },
+    { href: '/equipe', label: 'Equipe' },
+    { href: '/cursos', label: 'Cursos' },
     { href: '#contato', label: 'Contato' },
 ];
 

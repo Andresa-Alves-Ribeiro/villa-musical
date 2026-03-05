@@ -9,7 +9,7 @@ const HERO_CONFIG = {
   badge: 'Escola Municipal de Música de Cosmópolis “Heitor Villa-Lobos”',
   logoAlt: 'Villa Musical - Escola de Música de Cosmópolis',
   title: 'Formação humana através da música',
-  subtitle: 'Aulas gratuitas de instrumentos musicais, coral, orquestra e musicalização infantil para cosmopolitanos',
+  subtitle: 'Aulas gratuitas de instrumentos musicais, coral, orquestra e musicalização infantil para cosmopolenses',
 };
 
 export default function HeroSection() {
