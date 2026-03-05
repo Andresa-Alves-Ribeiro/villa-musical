@@ -5,9 +5,8 @@ import Logo from '../../assets/nova_logo.jpg'
 export default function Header() {
     const navItems = [
         { href: '/', label: 'Início' },
-        { href: '/professores', label: 'Professores' },
+        { href: '/equipe', label: 'Equipe' },
         { href: '/cursos', label: 'Cursos' },
-        { href: '/noticias', label: 'Notícias' },
         { href: '#contato', label: 'Contato' },
     ]
 
